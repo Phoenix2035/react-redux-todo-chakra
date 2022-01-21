@@ -11,3 +11,10 @@ export const addTodo = todo => {
         }
     }
 }
+
+export const toggleTodo = id => {
+    return {
+        type: types.TOGGLE_TODO,
+        payload: id
+    }
+}
