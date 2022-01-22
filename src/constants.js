@@ -1,5 +1,5 @@
-export const VISIBILITY_FILTER = {
+export const TABS_FILTER = {
     ALL: "All",
     COMPLETED: "Completed",
-    INCOMPLETED: "InCompleted"
+    INCOMPLETE: "InCompleted"
 }

@@ -1,17 +1,21 @@
 import { Container, Tabs, TabList, Tab } from "@chakra-ui/react";
+import { useDispatch } from "react-redux";
 
-import { VISIBILITY_FILTER } from "../constants"
+import { TABS_FILTER } from "../constants"
+import { setFilter } from "../redux/tabs/tabs.action"
 
-const VisibilityFilter = () => {
+const TabsFilter = () => {
+    const dispatch = useDispatch()
+
     return (
         <Container centerContent>
             <Tabs>
                 <TabList>
                     {
-                        Object.keys(VISIBILITY_FILTER).map((item, index) => {
-                            const currentFilter = VISIBILITY_FILTER[item]
+                        Object.keys(TABS_FILTER).map((item, index) => {
+                            const currentFilter = TABS_FILTER[item]
                             return (
-                                < Tab key={index} >
+                                < Tab key={index} onClick={() => dispatch(setFilter(currentFilter))}>
                                     {currentFilter}
                                 </Tab>
                             )
@@ -24,4 +28,4 @@ const VisibilityFilter = () => {
     )
 };
 
-export default VisibilityFilter;
+export default TabsFilter;

@@ -1,7 +1,7 @@
 import { Container, Heading } from "@chakra-ui/react"
 import AddTodo from "./components/AddTodo";
 import TodoList from "./components/TodoList";
-import VisibilityFilter from "./components/VisibilityFilter";
+import TabsFilter from "./components/TabsFilter";
 
 function App() {
     return (
@@ -11,7 +11,7 @@ function App() {
             </Heading>
             <AddTodo />
             <TodoList />
-            <VisibilityFilter />
+            <TabsFilter />
         </Container>
     );
 }
